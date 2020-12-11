@@ -42,4 +42,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+//Funcion que inidca que un usuario tiene varias empresas
+    public function Empresa(){
+
+        return $this->hasMany("App\Models\Empresa");
+        }
 }

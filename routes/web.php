@@ -28,5 +28,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['prefix'=>'admin','middleware'=>['auth','role:admin']],function(){
    Route::resource('/ruta',App\Http\Controllers\Admin\RutaController::class);
-
+   Route::resource('/empresa',App\Http\Controllers\Admin\EmpresaController::class);
+   Route::resource('/post',App\Http\Controllers\Admin\PostController::class);
 });
